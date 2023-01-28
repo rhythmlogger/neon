@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: top;
+            }
+
+            50% {
+                background-position: bottom;
+            }
+
+            100% {
+                background-position: top;
+            }
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: url('https://picsum.photos/id/2/1920/1080');
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: move 45s linear infinite;
+        }
+
+        .sign-up {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 400px;
+            height: 600px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .sign-up .title {
+            color: white;
+        }
+
+        .sign-up .label {
+            color: white;
+            font-size: large;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            background-color: rgba(128, 128, 128, 0.2);
+        }
+
+        #id,
+        #password,
+        #repassword {
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            border: solid 1px lightgray;
+            color: white;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 15px;
+        }
+
+        .sign-up .id-panel {
+            line-height: 25px;
+            padding-left: 15px;
+            margin-top: 25px;
+        }
+
+        .sign-up .password-panel {
+            line-height: 25px;
+            padding-left: 15px;
+            margin-top: 25px;
+        }
+
+        .sign-up .btn {
+            font-size: small;
+            padding: 0.5rem;
+            background-color: white;
+            color: black;
+            width: 80px;
+            border: 0;
+            height: 35px;
+        }
+
+        .sign-up .button-panel {
+            line-height: 25px;
+            padding-left: 15px;
+            margin-top: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sign-up">
+        <div class="label">
+            회원가입
+        </div>
+        <div class="id-panel">
+            <h5 class="title">아이디</h5>
+            <input type="text" class="input" id="id" />
+        </div>
+
+        <div class="password-panel">
+            <h5 class="title">비밀번호</h5>
+            <input type="password" class="input" id="password" />
+        </div>
+
+        <div class="password-panel">
+            <h5 class="title">비밀번호 재입력</h5>
+            <input type="password" class="input" id="repassword" />
+        </div>
+
+        <div class="button-panel">
+            <input type="submit" class="btn" value="로그인" />
+            <input type="reset" class="btn" value="취소" />
+        </div>
+    </div>
+</body>
+
+</html>
