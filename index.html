@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, world</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        hr {
+            border: 0;
+        }
+
+        nav {
+            height: 25px;
+            line-height: 25px;
+            padding-left: 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        header {
+            height: 50px;
+            line-height: 50px;
+            padding-left: 25px;
+            background-color: black;
+            color: white;
+        }
+
+        section {
+            padding-top: 25px;
+            padding-left: 25px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav li {
+            float: left;
+            margin-right: 25px;
+        }
+
+        section ul {
+            margin-left: 25px;
+        }
+
+        section li {
+            float: left;
+            margin-right: 25px;
+            width: 150px;
+            height: 250px;
+            border: 1px solid lightgray;
+            margin-top: 25px;
+        }
+
+        .notice {
+            position: absolute;
+            right: 50px;
+            width: 400px;
+            background-color: white;
+            height: 550px;
+            opacity: 0.85;
+            padding: 15px;
+        }
+
+        header .panel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .panel .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .panel .controller {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        header li {
+            float: left;
+            margin-right: 25px;
+        }
+
+        .item {
+            margin: 10px;
+            width: 130px;
+            height: 130px;
+        }
+
+        section .list .title {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: 900;
+
+        }
+
+        section .list .description {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 130px;
+            height: 65px;
+            /* border:1px solid black; */
+            overflow: hidden;
+            font-weight: 100;
+        }
+
+        #background {
+            height: 600px;
+            background-image: url('https://picsum.photos/id/20/1920/1080');
+            background-size: cover;
+            background-position: top;
+            animation: move 60s linear infinite;
+            background-color: black;
+        }
+
+        footer {
+            width: 100%;
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .notice li {
+            width: 100%;
+            height: auto;
+            border: 0;
+            font-weight: 100;
+        }
+
+        .notice .title {
+            font-size: x-large;
+            font-weight: 900;
+
+        }
+
+        #background {
+            position: relative;
+        }
+
+        #background>.title {
+            position: absolute;
+            bottom: 50px;
+            left: 25px;
+            color: white;
+            font-size: 15px;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        @keyframes move {
+            0% {
+                background-position: top;
+            }
+
+            50% {
+                background-position: bottom;
+            }
+
+            100% {
+                background-position: top;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        #background-description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            font-size: 32px;
+            color: white;
+            animation: blink ease-in-out 4s;
+            text-shadow: 1px 1px 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="panel">
+            <span class="title">
+                Neon Elcteronic
+            </span>
+            <ul class="controller">
+                <li>로그인</li>
+                <li>회원가입</li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <hr>
+    </div>
+    <nav>
+        <ul>
+            <li>홈</li>
+            <li>상품목록</li>
+            <li>장바구니</li>
+            <li>고객센터</li>
+        </ul>
+    </nav>
+    <section id="background">
+        <div class="title" id="clock">
+            Title
+        </div>
+        <div id="background-description">
+            Lorem ipsum
+        </div>
+        <div class="notice">
+            <div class="title">알림</div>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li> Cupiditate magnam enim modi dolorem rem iste alias</li>
+            <li>laborum optio, veniam distinctio sit beatae </li>
+            <li>nam ad fuga sapiente repellat a illum vero?</li>
+            <li>Aliquid quia odit similique sed cupiditate itaque illum quos,</li>
+            <li> commodi ad architecto molestias, aperiam totam</li>
+            <li>harum earum et nemo iste maxime obcaecati alias! Error hic expedita corrupti,</li>
+            <li> nemo perspiciatis nulla?</li>
+        </div>
+    </section>
+    <section>
+        <div>
+            <ul class="list">
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/1/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/2/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/3/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/4/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/5/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/6/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/7/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/8/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/9/130/130"> </div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/10/130/130"></div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+                <li>
+                    <div class="item"><img src="https://picsum.photos/id/11/130/130"></div>
+                    <div class="title">Title</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sint, sunt
+                        soluta repellat consectetur corporis facere necessitatibus adipisci blanditiis, ex perspiciatis,
+                        itaque fuga dignissimos tempore. Dolorem eveniet dignissimos ad ut?</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        회사소개 인재채용 제휴제안 이용약관 개인정보처리방침 청소년보호정책 고객센터 ⓒ Neon Elctronic Corp.
+    </footer>
+    <script>
+        setInterval(function () {
+            let background = document.getElementById('background');
+            background.style = `background-image:url('https://picsum.photos/id/${parseInt(Math.random() * 50)}/1920/1080')`;
+        }, 10000)
+        var Target = document.getElementById("clock");
+        function clock() {
+            var time = new Date();
+            var year = time.getFullYear();
+            var month = time.getMonth();
+            var date = time.getDate();
+            var day = time.getDay();
+            var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+
+            Target.innerText =
+                `${year}년 ${month + 1}월 ${date}일 ${week[day]}요일 ` +
+                `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        }
+        setInterval(clock, 1000); 
+    </script>
+</body>
+
+</html>
